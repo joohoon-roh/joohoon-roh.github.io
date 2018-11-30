@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    function pos(event) {
+        var str = "";
+        str = "offsetX: " + (event.offsetX == undefined ? event.layerX : event.offsetX);
+        str += ", offsetY: " + (event.offsetY == undefined ? event.layerY : event.offsetY);
+        str += "<br/>screenX: " + event.screenX;
+        str += ", screenY : " + event.screenY;
+        str += "<br/>clientX : " + event.clientX;
+        str += ", clientY : " + event.clientY;
+        str += "<br/>pageX : " + event.pageX;
+        str += ", pageY : " + event.pageY;
+        document.getElementById("result").innerHTML = str;
+    }
+</script>
+</head>
+<body>
+    <div onclick="pos(event);" style="position:absolute; top:100px; left:200px; width:200px; height:200px; border:1px solid #ff0000;"></div>
+    <div id="result"></div>
+</body>

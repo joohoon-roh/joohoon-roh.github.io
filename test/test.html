@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box {
+			width: 100%;
+			overflow: auto;
+			overflow-scrolling : touch;
+			-webkit-overflow-scrolling : touch;
+		}
+		.contentWrap {
+			width: calc((80vw + 10px) * 6 - 10px);
+		}
+		.content {
+			width: 80vw;
+			max-width: 600px;
+			height: 60vw;
+			max-height: 450px;
+			margin-right: 10px;
+			background-color: #fb742a;
+			float: left;
+		}
+		.content:nth-child(2n) {
+			background-color: blue;
+		}
+		.content:last-child {
+			margin-right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="contentWrap">
+			<div class="content">1</div>
+			<div class="content">2</div>
+			<div class="content">3</div>
+			<div class="content">4</div>
+			<div class="content">5</div>
+			<div class="content">6</div>
+		</div>
+	</div>
+</body>
+</html>

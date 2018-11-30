@@ -1,0 +1,152 @@
+html,body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+img {
+    width: 100%;
+    border: 0;
+    vertical-align: top;
+}
+
+ul,li,button {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+button,a,input {
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background:transparent;
+}
+
+input[type=text],
+input[type=number],
+input[type=password] {
+    display: inline-block;
+    padding:10px 10px 10px 0;
+    width: 75%;
+    height: 10vw;
+    color: #a3997d;
+    text-indent: 15px;
+    font-size: 16px;
+    background: #f3f3f3;
+    border: 0px;
+    border-radius: 80px;
+    box-sizing: border-box;
+}
+input[type="checkbox"]{
+    position: absolute;
+    visibility: hidden;
+    background-color: #594c40;
+    width:1px;
+    height:1px;
+}
+label{
+    display: inline-block;
+    position: absolute;
+    bottom:0;
+    left:16%;
+    width:5.6vw;
+    height:5.6vw;
+    border-radius: 0.6vw;
+    background-color:#594c40;
+    vertical-align: middle;
+}
+.check2{
+    top:-10%;
+}
+input[type=checkbox]:checked ~ label{
+    background:url('../img/thanksgiving_img_checked.png') center no-repeat #594c40;
+    background-size:5.6vw 5.6vw;
+}
+.btn_submit{
+    position: absolute;
+    width: 43%;
+    height: 50%;
+    top: 2%;
+    right:0;
+    border:0;
+    border-radius: 28px;
+    color:transparent;
+}
+.btn_submit.btn_l{
+    left: 6%;
+}
+.btn_submit.btn_r{
+    right:6%;
+}
+.btn_pop1{
+
+}
+.eve_form_div{
+    width:100%;
+    height:100%;
+}
+.btn_div{
+    position: relative;
+}
+.insert-cont{
+    text-align: center;
+    background-color:#fffaea;
+}
+.insert-cont form div input[type="text"],
+.insert-cont form div input[type=number]{
+    background-color: #fff0c6;
+}
+.insert-cont form div input#pay_account{
+    margin-top:10.5px;
+}
+.insert-cont form div input::-webkit-input-placeholder{
+    color:#a3997d
+}
+.check_agree li:nth-child(2){
+    margin-top:0;
+}
+.check_agree li{
+    position: relative;
+}
+.check_agree li span{
+    display: inline-block;
+    width:40%;
+    position: relative;
+    color:#594c40;
+    letter-spacing: -1px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/*popup*/
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 99;
+}
+.overlay img{
+    margin:auto;
+}
+.cls_pop{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right:0px;
+    bottom: 0px;
+    left: 0px;
+    cursor: pointer;
+}
+.overlay > div{
+     width:100%;
+    padding-top:15%;
+    text-align:center;
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>MANGO</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+		<![endif]-->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/vendors/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="js/examples.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					anchors: ['HOME', 'ABOUT', 'INGREDIENT', 'HOW_TO_CUT', 'BUY_IT_NOW'],
+					navigation: true,
+					navigationPosition: 'right',
+					navigationTooltips: ['HOME', 'ABOUT', 'INGREDIENT', 'HOW_TO_CUT', 'BUY_IT_NOW'],
+					slidesNavigation:true,
+					css3:false
+				});
+			});
+		</script>
+
+		<style>
+			header {position:fixed; display:inline-block; top:0; left:0; z-index:1000; width:100%; background-color:rgba(255,255,255,0.4); padding: 12px 0; }
+			header > div > p {float:left; margin-left:30px;}
+			header > div > ul {float:right;}
+			header > div > ul > li {float:left; text-align:center; margin-right:30px;}
+			header > div > ul > li > a {display:block; padding:5px 7px; margin:7px -7px; font-size:15px; color:#333;}
+			header > div > ul > li:hover > a {color:#fff; background-color:#fccc38;}
+
+			body {background:url('img/bg_00.jpg') no-repeat center; background-attachment: fixed; background-size:cover;}
+
+			input {background-color:#fff; border:none;}
+			input:focus {background-color:#fff; border:none;}
+			input#input_button:hover {background-color:#ddd;}
+
+
+			#section1 {margin-bottom:170px; z-index:-1;}
+			#section1 h1 {font-size:57px; color:#fff; padding:130px 0 10px 0;}
+			#section1 h2 {font-size:29px; color:#fff; padding-bottom:50px;}
+			#section1 img {margin-right:-50px;}
+
+			#section2 {margin-bottom:170px; position:relative; overflow:hidden;}
+			#section2 .bg_png_01 {z-index:10; position:absolute; top:-10%; left:0;}
+			#section2 .bg_png_02 {z-index:10; position:absolute; top:-20%; right:5%;}
+			#section2 .bg_png_03 {z-index:10; position:absolute; bottom:-20%; left:0;}
+			#section2 .bg_png_04 {z-index:10; position:absolute; bottom:-30%; right:0;}
+			#section2 .box {position:absolute; top:0; left:50%; width:800px; margin-left:-400px; padding-top:5%;}
+			#section2 h1 {font-size:55px; color:#686868; padding:20px 0 15px;}
+			#section2 h2 {font-size:25px; color:#686868; padding-bottom:10px; line-height:30px;}
+			#section2 h2 img {padding-right:5px;}
+			#section2 h3 {color:#686868;}
+			#section2 #slide2_1 img {padding-top:180px; margin-bottom: -15px;}
+			#section2 #slide2_2 img {padding-top:180px; margin-bottom: -10px;}
+			#section2 #slide2_3 img {padding-top:180px; margin-bottom: 20px;}
+			#section2 #slide2_4 img {padding-top:150px; margin-bottom: 20px;}
+			#section2 #slide2_5 img {padding-top:170px; margin-bottom: 15px;}
+
+			#section3 {margin-bottom:170px;  position:relative; overflow:hidden;}
+			#section3 .bg_png_11 {z-index:10; position:absolute; bottom:-70px; left:-100px;}
+			#section3 .bg_png_12 {z-index:10; position:absolute; bottom:-70px; right:0;}
+			#section3 .box {position:absolute; top:0; left:50%; width:800px; margin-left:-400px; padding-top:5%;}
+			#section3 h1 {font-size:55px; color:#fff; padding:60px 0 15px;}
+			#section3 h2 {font-size:25px; color:#fff; padding-bottom:35px; line-height:30px;}
+			#section3 .img_box {position:relative; width:450px; margin:auto; }
+			#section3 .img_box ul {position:absolute; top:0; left:0;}
+			#section3 .img_box ul li.point_01 {position:absolute; left:30px; top:200px; z-index:10;}
+			#section3 .img_box ul li.line_01 {position:absolute; left:-70px; top:228px;}
+			#section3 .img_box ul li.point_02 {position:absolute; left:130px; top:140px; z-index:10;}
+			#section3 .img_box ul li.line_02 {position:absolute; left:67px; top:160px;}
+			#section3 .img_box ul li.point_03 {position:absolute; left:240px; top:130px; z-index:10;}
+			#section3 .img_box ul li.line_03 {position:absolute; left:253px; top:153px;}
+			#section3 .img_box ul li.point_04 {position:absolute; left:330px; top:180px; z-index:10;}
+			#section3 .img_box ul li.line_04 {position:absolute; left:352px; top:200px;}
+
+			#section4 {margin-bottom:170px;  position:relative; overflow:hidden;}
+			#section4 .bg_png_21 {z-index:10; position:absolute; bottom:-100px; left:-70px;}
+			#section4 .bg_png_22 {z-index:10; position:absolute; bottom:-100px; right:-380px;}
+			#section4 .box {position:absolute; top:0; left:50%; width:800px; margin-left:-400px; padding-top:5%;}
+			#section4 h1 {font-size:55px; color:#fff;  }
+			#section4 h2 {font-size:35px; color:#fff; }
+			#section4 img {padding-top:80px;}
+			#section4 .img_box {position:relative; width:450px; margin:auto;}
+
+			#section5 {margin-bottom:170px;  position:relative; overflow:hidden;}
+			#section5 article {}
+			#section5 article h1 {font-size:55px; color:#fff; }
+			#section5 article > div {font-size:35px; color:#fff; }
+			#section5 article > div > div.inbox {width:500px; margin:7px auto; text-align:left;}
+			#section5 article > div > div.inbox ul li:last-child {text-align:center; padding-top:13px;}
+			#section5 article > div > div.inbox ul li {font-size:18px; padding-top:8px;}
+
+			#section5 footer {position:absolute; bottom:0; width:100%; height:35px; background-color:#333; color:rgba(255, 255, 255, 0.8); text-align:right; line-height:35px; letter-spacing:2px; font-size:13px;}
+			#section5 footer div {padding:0 15px;}
+		</style>
+		<style type="text/css">
+			.icon-scroll:before {
+				position: absolute;
+				left: 50%;
+			}
+			.icon-scroll {
+				position: absolute;
+				width: 40px;
+				height: 70px;
+				margin-top: -35px;
+				right: 7%;
+				top: 50%;
+				box-shadow: inset 0 0 0 1px #fff;
+				border-radius: 25px;
+			}
+			.icon-scroll:before {
+				content: '';
+				width: 8px;
+				height: 8px;
+				background: #fff;
+				margin-left: -4px;
+				top: 8px;
+				border-radius: 4px;
+				-webkit-animation-duration: 1.5s;
+				animation-duration: 1.5s;
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+				-webkit-animation-name: scroll;
+				animation-name: scroll;
+			}
+			@-webkit-keyframes scroll {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+					-webkit-transform: translateY(46px);
+					transform: translateY(46px);
+				}
+			}
+			@keyframes scroll {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+					-webkit-transform: translateY(46px);
+					transform: translateY(46px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="fullpage">
+			<!-- HEADER -->
+			<header>
+				<div>
+					<p>
+						<a href="#HOME">
+							<img src="img/logo.png" alt="logo" />
+						</a>
+					</p>
+					<ul>
+						<li>
+							<a href="#HOME">HOME</a>
+						</li>
+						<li>
+							<a href="#ABOUT">ABOUT</a>
+						</li>
+						<li>
+							<a href="#INGREDIENT">INGREDIENT</a>
+						</li>
+						<li>
+							<a href="#HOW_TO_CUT">HOW TO CUT</a>
+						</li>
+						<li>
+							<a href="#BUY_IT_NOW">BUY IT NOW</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+
+			<!-- SECTION_1 -->
+			<section id="section1">
+				<h1>"Sweet, Nutritious and Delicious"</h1>
+				<h2>The Key to happiness is hidden in the Mango</h2>
+				<img src="img/mango.png" alt="MainMango" />
+				<div class='icon-scroll'><div/>
+			</section>
+
+			<!-- SECTION_2 -->
+			<section id="section2">
+				<div class="bg_png_01">
+					<img src="img/mango_png_01.png" alt="BG1Mango" />
+				</div>
+				<div class="bg_png_02">
+					<img src="img/mango_png_02.png" alt="BG2Mango" />
+				</div>
+				<div class="bg_png_03">
+					<img src="img/mango_png_03.png" alt="BG3Mango" />
+				</div>
+				<div class="bg_png_04">
+					<img src="img/mango_png_04.png" alt="BG4Mango" />
+				</div>
+				<article class="box">
+					<h1>Different shapes and sizes</h1>
+					<h2><img src="img/logo_2.png"  alt="MangoText" />comes in many different unique shapes and sizes.<br/>
+						Find the one that fits your personal preferences.
+					</h2>
+				</article>
+				<article class="slide" id="slide2_1">
+					<img src="img/mango_01.png" alt="AlphonsoMango" />
+					<h2>Alphonso</h2>
+					<h3>Sweet : ★★★★☆</h3>
+					<h3>Fresh : ★★★☆☆</h3>
+					<h3>Price : ★★★★☆</h3>
+				</article>
+				<article class="slide" id="slide2_2">
+					<img src="img/mango_02.png" alt="AppleMango" />
+					<h2>Apple mango</h2>
+					<h3>Sweet : ★★☆☆☆</h3>
+					<h3>Fresh : ★★★★☆</h3>
+					<h3>Price : ★☆☆☆☆</h3>
+				</article>
+				<article class="slide" id="slide2_3">
+					<img src="img/mango_03.png" alt="CarabaoMango" />
+					<h2>Carabao</h2>
+					<h3>Sweet : ★★★★☆</h3>
+					<h3>Fresh : ★★★★☆</h3>
+					<h3>Price : ★★★★★</h3>
+				</article>
+				<article class="slide" id="slide2_4">
+					<img src="img/mango_04.png" alt="KesarMango" />
+					<h2>Kesar</h2>
+					<h3>Sweet : ★★★★☆</h3>
+					<h3>Fresh : ★★★☆☆</h3>
+					<h3>Price : ★★★★☆</h3>
+				</article>
+				<article class="slide" id="slide2_5">
+					<img src="img/mango_05.png" alt="GlennMango" />
+					<h2>Glenn</h2>
+					<h3>Sweet : ★★★★★</h3>
+					<h3>Fresh : ★★★★☆</h3>
+					<h3>Price : ★★★★★</h3>
+				</article>
+			</section>
+
+			<!-- SECTION_3 -->
+			<section id="section3">
+				<div class="bg_png_11">
+					<img src="img/mango_png_11.png" alt="BG1MangoBag" >
+				</div>
+				<div class="bg_png_12">
+					<img src="img/mango_png_12.png" alt="BG2MangoBag" >
+				</div>
+				<article class="box">
+					<h1>Is healthy? Yes it is!</h1>
+					<h2>The majority of carbohydrates in mangos are complex<br/>carbohydrates, your body's main energy source.</h2>
+
+					<div class="img_box">
+						<img src="img/mango_01.png" alt="mango" />
+						<ul>
+							<li class="point_01"><img src="img/point.png" alt="PointPng" /></li>
+							<li class="line_01"><img src="img/line_01.png" alt="LinePng" /><h2></h2></li>
+							<li class="point_02"><img src="img/point.png" alt="PointPng" /></li>
+							<li class="line_02"><img src="img/line_02.png" alt="LinePng" /></li>
+							<li class="point_03"><img src="img/point.png" alt="PointPng" /></li>
+							<li class="line_03"><img src="img/line_03.png" alt="LinePng" /></li>
+							<li class="point_04"><img src="img/point.png" alt="PointPng" /></li>
+							<li class="line_04"><img src="img/line_04.png" alt="LinePng" /></li>
+						</ul>
+					</div>
+				</article>
+			</section>
+
+
+
+			<!-- SECTION_4 -->
+			<section id="section4">
+				<div class="bg_png_21">
+					<img src="img/mango_png_21.png" alt="BG1MangoIceCreame" >
+				</div>
+				<div class="bg_png_22">
+					<img src="img/mango_png_22.png" alt="BG2Mango" >
+				</div>
+				<article class="slide" id="slide4_1">
+					<h1>HOW TO CUT ?</h1><br/>
+					<img src="img/mango1.png" alt="Mango" />
+				</article>
+				<article class="slide" id="slide4_2">
+					<h1>Hold</h1><br/>
+					<img src="img/cut_1.png" alt="Mango" />
+				</article>
+				<article class="slide" id="slide4_3">
+					<h1>CUT</h1><br/>
+					<img src="img/cut_2.png" alt="Mango" />
+				</article>
+				<article class="slide" id="slide4_4">
+					<h1>CUT CUT</h1><br/>
+					<img src="img/cut_3.png" alt="Mango" />
+				</article>
+				<article class="slide" id="slide4_5">
+					<h1>Ddadan~!</h1><br/>
+					<img src="img/cut_4.png" alt="Mango" />
+				</article>
+				<article class="slide" id="slide4_6">
+					<h2>CUT CUT CUT CUT ....</h2><br/>
+					<img src="img/cut_5.png" alt="Mango" />
+				</article>
+				<article class="slide" id="slide4_7">
+					<h1>Yummy!</h1><br/>
+					<img src="img/mango1.png" alt="Mango" />
+				</article>
+				<article class="slide" id="slide4_8">
+					<h1>Let's Eat !</h1>
+					<h2>: )</h2>
+				</article>
+			</section>
+
+			<!-- SECTION_5 -->
+			<section id="section5">
+				<article>
+					<h1>BUY IT NOW</h1>
+					<div id="change">
+						<h2 onclick="change_page()">click me!</h2>
+					</div>
+				</article>
+				<footer>
+					<div>Roh-JooHoon</div>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</footer>
+			</section>
+		</div>
+
+		<script>
+			function change_page(){
+				document.getElementById('change').innerHTML=
+				"<div class='inbox'>"+
+				"<ul>"+
+				"<li>Phon Number : 010-2890-1908</li>"+
+				"<li>E-Mail : picfox@naver.com</li>"+
+				"<li></li>"+
+				"<li>Your E-Mail : <input type='text' name='input_box' style='width: 80px; height:18px;' > @ <input type='text' name='input_box' style='width: 100px; height:18px;' ></li>"+
+				"<li><input type='text' name='input_box' style='width: 500px; height:100px;' ></li>"+
+				"<li><input type='button' id='input_button' name='input_button' alt='send E-Mail' value='send E-Mail' style='width: 90px; height:30px; text-align:center;'></li>"+
+				"</ul>"+
+				"<div>";
+			}
+		</script>
+		<script>
+	$('.line_01').hide();//  <= 아이디 info 를 쓰고있는놈을 일단 숨깁니다
+	$('.point_01').hover(
+		function(){// <= 아이디 button 을 쓰고있는놈을 클릭하면
+			$('.line_01').slideDown(325);
+		}, function() {
+			$('.line_01').slideUp(325);
+		}
+		);
+	$('.line_02').hide();//  <= 아이디 info 를 쓰고있는놈을 일단 숨깁니다
+	$('.point_02').hover(
+		function(){// <= 아이디 button 을 쓰고있는놈을 클릭하면
+			$('.line_02').slideDown(340);
+		}, function() {
+			$('.line_02').slideUp(340);
+		}
+		);
+	$('.line_03').hide();//  <= 아이디 info 를 쓰고있는놈을 일단 숨깁니다
+	$('.point_03').hover(
+		function(){// <= 아이디 button 을 쓰고있는놈을 클릭하면
+			$('.line_03').slideDown(350);
+		}, function() {
+			$('.line_03').slideUp(350);
+		}
+		);
+	$('.line_04').hide();//  <= 아이디 info 를 쓰고있는놈을 일단 숨깁니다
+	$('.point_04').hover(
+		function(){// <= 아이디 button 을 쓰고있는놈을 클릭하면
+			$('.line_04').slideDown(330);
+		}, function() {
+			$('.line_04').slideUp(330);
+		}
+		);
+
+	</script>
+</body>
+</html>

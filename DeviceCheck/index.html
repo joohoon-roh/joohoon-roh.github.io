@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+    dataLayer = [{
+        'countryCode': 'KR',
+        'eventCode': '2017KTD'
+    }];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBD4ZZP');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <title>2017KTD</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="/common/js/jquery-1.11.0.min.js"></script>
+    <script src="./js/submit.js"></script>
+    <script src="./js/popup.js"></script>
+    <script src="./js/DeviceCheck.js"></script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBD4ZZP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="wrapper">
+        <!-- header -->
+        <section>
+            <div>
+                <img src="./img/thanksgiving_img_01.jpg" alt="행복한 추석을 위해 삼성테마가 스타벅스라도 드려야죠~ 추석테마를 구매하신 분 중 추첨을 통해 100분께 1만원 e-Gift card, 1000분께 3천원 테마 Gift card를 드립니다">
+            </div>
+        </section>
+        <!-- contents -->
+        <section>
+            <div>
+                <img src="./img/thanksgiving_img_02.jpg" alt="이벤트기간은 2017년9월28일 에서 10월9일 이며 참여방법은 아래 정보를 남겨주신 후, 약관 동의 체크, 정보 전송 후 테마 받으러 가기 Click, 테마 구매하면 이벤트 응모 완료! 10월6일 1만원 e-Gift card에 당첨된 경우 MMS로 당첨 결과를 개별 통보, 3천원권 테마 Gift Card에 당첨된 경우 나의 페이지에서 확인. 삼성테마를 사용 중이신 삼성 계정 및 본인의 전화번호를 입력바랍니다.">
+            </div>
+        </section>
+        <section style="width:100%;height:100%;">
+            <div class="eve_form_div">
+                <div class="insert-cont">
+                    <form id="submitForm" method="GET" action="success.html">
+                        <div>
+                            <input type="hidden" id="campaign" name="campaign" value="2017KTD" />
+                            <!-- #1. 이름입력 -->
+                            <div>
+                                <div>
+                                    <input type="text" id="name" name="name" placeholder="이름">
+                                </div>
+                            </div>
+                            <!-- #2.삼성 계정 입력-->
+                            <div>
+                                <div>
+                                    <input type="text" id="account" name="account" placeholder="삼성계정(이메일/전화번호)">
+                                </div>
+                                <div>
+                                    <img src="img/thanksgiving_img_03.jpg" alt="">
+                                </div>
+                            </div>
+                            <!-- #3.전화번호 입력-->
+                            <div>
+                                <div>
+                                    <input type="number" id="phone" name="phone" placeholder="휴대폰번호" numberonly minlength="11" maxlength="11">
+                                </div>
+                            </div>
+                            <!-- #4.개인정보약관 체크-->
+                            <div>
+                                <div>
+                                    <form action="" method="get" class="contents-form">
+                                        <ul class="check_agree">
+                                            <li style="margin-top:0">
+                                                <input type="checkbox" id="checked_01" name="checked_01" value="checked_01">
+                                                <label for="checked_01"></label>
+                                                <img class="btn_pop1" src="img/thanksgiving_img_03_2.jpg" alt="개인정보 수집 이용에 관한동의 (필수)">
+                                            </li>
+                                            <li style="margin-top:16px;">
+                                                <input type="checkbox" id="checked_02" name="checked_02" value="checked_02">
+                                                <label for="checked_02"></label>
+                                                <img class="btn_pop2" src="img/thanksgiving_img_03_3.jpg" alt="개인정보 처리위탁에 관한 동의 (필수)">
+                                            </li>
+                                            <li>
+                                                <img src="img/thanksgiving_img_03_4.jpg" alt="">
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="btn_div">
+                                    <img src="img/thanksgiving_img_04.jpg">
+                                    <button class="btn_submit btn_l" type="button" name="submit_message" onclick="submitEvent();" data-action="click" alt="정보 전송">정보 전송</button>
+                                    <a href="http://tinyurl.com/y75hb53v" class="btn_submit btn_r" type="button" data-action="click" alt="테마 받으러 가기" name="">테마 받으러 가기</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <img src="img/thanksgiving_img_05.jpg" class="btn_pop3" style="cursor: pointer;" alt="유의사항">
+                                </div>
+                                <div>
+                                    <img src="img/thanksgiving_img_06.jpg" alt="">
+                                </div>
+                            </div>
+                            <!--개인정보약관-->
+                            <div class="overlay" id="ag_pop01" style="display:none;">
+                                <div class="cls_pop">
+                                    <div>
+                                        <img src="./img/popup_01.png" al="개인정보약관">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--개인정보처리위탁-->
+                            <div class="overlay" id="ag_pop02" style="display:none;">
+                                <div class="cls_pop">
+                                    <div>
+                                        <img src="img/popup_02.png" alt="개인정보처리위탁">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--유의사항-->
+                            <div class="overlay" id="ag_pop03" style="display:none;">
+                                <div class="cls_pop">
+                                    <div>
+                                        <img src="img/popup_03.png" alt="유의사항">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
